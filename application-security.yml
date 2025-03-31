@@ -1,0 +1,9 @@
+server:
+  port: 9100
+
+spring:
+  application:
+    name: security-service
+  security:
+    jwt:
+      secret: hello-my-name-is-Dang-Quang-from-UET # Change this to a secure secret

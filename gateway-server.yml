@@ -8,24 +8,27 @@ spring:
     gateway:
       routes:
         - id: user-service
-          uri: lb://USER-SERVICE
+          uri: lb://user-service
           predicates:
             - Path=/api/v1/users/**
           filters:
             - JwtGatewayFilter
+
         - id: department-service
-          uri: lb://DEPARTMENT-SERVICE
+          uri: lb://department-service
           predicates:
             - Path=/api/v1/departments/**
           filters:
             - JwtGatewayFilter
+
         - id: department-exists
-          uri: lb://DEPARTMENT-SERVICE
+          uri: lb://department-service
           predicates:
             - Path=/api/v1/departments/is-exist/**
           filters:
             - JwtGatewayFilter
+
         - id: security-service
-          uri: lb://SECURITY-SERVICE
+          uri: lb://security-service
           predicates:
             - Path=/api/v1/auth/**

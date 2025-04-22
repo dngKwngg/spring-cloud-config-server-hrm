@@ -37,5 +37,3 @@ spring:
           uri: lb://permission-service
           predicates:
             - Path=/api/v1/role-permission/**
-          filters:
-            - JwtGatewayFilter

@@ -3,7 +3,7 @@ server:
 
 spring:
   application:
-    name: security-service
+    name: common-service
   datasource:
     url: jdbc:postgresql://localhost:5433/hrm_role_permission
     username: postgres

@@ -28,12 +28,12 @@ spring:
           filters:
             - JwtGatewayFilter
 
-        - id: security-service
-          uri: lb://security-service
+        - id: common-service
+          uri: lb://common-service
           predicates:
             - Path=/api/v1/auth/**
 
-        - id: security-service
-          uri: lb://security-service
+        - id: common-service
+          uri: lb://common-service
           predicates:
             - Path=/api/v1/role-permission/**
